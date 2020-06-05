@@ -1,243 +1,538 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/Resources/ChristmasGig.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/Resources/Login.feature");
 formatter.feature({
   "line": 2,
-  "name": "Donation Form",
+  "name": "login Functionality",
   "description": "",
-  "id": "donation-form",
+  "id": "login-functionality",
   "keyword": "Feature",
   "tags": [
     {
       "line": 1,
-      "name": "@sh-donationform"
+      "name": "@SanityPack"
     }
   ]
 });
-formatter.before({
-  "duration": 9329406400,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 3,
-  "name": "Donate amount through donation form",
-  "description": "",
-  "id": "donation-form;donate-amount-through-donation-form",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 5,
-  "name": "I am on Christmas Gig page",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 6,
-  "name": "I choose donate amount",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 7,
-  "name": "click on donate button",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 8,
-  "name": "I navigate to donation form",
-  "keyword": "Then "
-});
-formatter.step({
+formatter.scenarioOutline({
   "line": 9,
-  "name": "I enter \"email\" \"title\" \"firstname\" \"lastname\" \"mobileno\" \"address1\" \"address2\" \"city\" \"postcode\" \"country\"",
-  "keyword": "And "
+  "name": "login with valid credential",
+  "description": "",
+  "id": "login-functionality;login-with-valid-credential",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 8,
+      "name": "@Login"
+    }
+  ]
 });
 formatter.step({
   "line": 10,
-  "name": "I give marketing consent \"phone\" \"email\" \"post\"",
+  "name": "I enter valid credential\"\u003cUsername\u003e\"\"\u003cPassword\u003e\"",
   "keyword": "And "
 });
 formatter.step({
   "line": 11,
-  "name": "I select debit card payment",
+  "name": "I click on log-in button",
   "keyword": "And "
 });
 formatter.step({
   "line": 12,
-  "name": "I select card type",
-  "keyword": "And "
+  "name": "I should see welcome message",
+  "keyword": "Then "
 });
-formatter.step({
-  "line": 13,
-  "name": "I provide card number",
-  "keyword": "And "
-});
-formatter.step({
+formatter.examples({
   "line": 14,
-  "name": "I select expiry date",
-  "keyword": "And "
+  "name": "",
+  "description": "",
+  "id": "login-functionality;login-with-valid-credential;",
+  "rows": [
+    {
+      "cells": [
+        "Username",
+        "Password"
+      ],
+      "line": 15,
+      "id": "login-functionality;login-with-valid-credential;;1"
+    },
+    {
+      "cells": [
+        "ppothiwala@gmail.com",
+        "Neelraj11"
+      ],
+      "line": 16,
+      "id": "login-functionality;login-with-valid-credential;;2"
+    }
+  ],
+  "keyword": "Examples"
+});
+formatter.before({
+  "duration": 9342774600,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
 });
 formatter.step({
-  "line": 15,
-  "name": "I provide security code",
-  "keyword": "And "
+  "line": 4,
+  "name": "I am on indiancouture landing page",
+  "keyword": "Given "
 });
 formatter.step({
-  "line": 16,
-  "name": "I click on donate now button",
-  "keyword": "And "
+  "line": 5,
+  "name": "I click sign-in link text",
+  "keyword": "When "
 });
 formatter.step({
-  "line": 17,
-  "name": "I should see the error message",
+  "line": 6,
+  "name": "I should navigate to sign-in page",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "ChristmasGigStepDefs.i_am_on_Christmas_Gig_page()"
+  "location": "LoginStepDefs.i_am_on_indiancouture_landing_page()"
 });
 formatter.result({
-  "duration": 1809061700,
+  "duration": 8655799400,
   "status": "passed"
 });
 formatter.match({
-  "location": "ChristmasGigStepDefs.i_choose_donate_amount()"
+  "location": "LoginStepDefs.i_click_sign_in_link_text()"
 });
 formatter.result({
-  "duration": 114391100,
+  "duration": 818600300,
   "status": "passed"
 });
 formatter.match({
-  "location": "ChristmasGigStepDefs.click_on_donate_button()"
+  "location": "LoginStepDefs.i_should_navigate_to_sign_in_page()"
 });
 formatter.result({
-  "duration": 814673400,
+  "duration": 847331200,
   "status": "passed"
 });
-formatter.match({
-  "location": "ChristmasGigStepDefs.i_navigate_to_donation_form()"
+formatter.scenario({
+  "line": 16,
+  "name": "login with valid credential",
+  "description": "",
+  "id": "login-functionality;login-with-valid-credential;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 8,
+      "name": "@Login"
+    },
+    {
+      "line": 1,
+      "name": "@SanityPack"
+    }
+  ]
 });
-formatter.result({
-  "duration": 554578300,
-  "status": "passed"
+formatter.step({
+  "line": 10,
+  "name": "I enter valid credential\"ppothiwala@gmail.com\"\"Neelraj11\"",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 11,
+  "name": "I click on log-in button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 12,
+  "name": "I should see welcome message",
+  "keyword": "Then "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "email",
-      "offset": 9
-    },
-    {
-      "val": "title",
-      "offset": 17
-    },
-    {
-      "val": "firstname",
+      "val": "ppothiwala@gmail.com",
       "offset": 25
     },
     {
-      "val": "lastname",
-      "offset": 37
-    },
-    {
-      "val": "mobileno",
-      "offset": 48
-    },
-    {
-      "val": "address1",
-      "offset": 59
-    },
-    {
-      "val": "address2",
-      "offset": 70
-    },
-    {
-      "val": "city",
-      "offset": 81
-    },
-    {
-      "val": "postcode",
-      "offset": 88
-    },
-    {
-      "val": "country",
-      "offset": 99
+      "val": "Neelraj11",
+      "offset": 47
     }
   ],
-  "location": "ChristmasGigStepDefs.i_enter(String,String,String,String,String,String,String,String,String,String)"
+  "location": "LoginStepDefs.i_enter_valid_credential(String,String)"
 });
 formatter.result({
-  "duration": 1221660700,
+  "duration": 184268000,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginStepDefs.i_click_on_log_in_button()"
+});
+formatter.result({
+  "duration": 58212500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginStepDefs.i_should_see_welcome_message()"
+});
+formatter.result({
+  "duration": 969174000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 753950400,
+  "status": "passed"
+});
+formatter.scenarioOutline({
+  "line": 19,
+  "name": "login with in-valid user name",
+  "description": "",
+  "id": "login-functionality;login-with-in-valid-user-name",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 18,
+      "name": "@Login1"
+    }
+  ]
+});
+formatter.step({
+  "line": 21,
+  "name": "I enter in-valid credentail \"\u003cUsername\u003e\"\"\u003cPassword\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 22,
+  "name": "I should see error message",
+  "keyword": "Then "
+});
+formatter.examples({
+  "line": 23,
+  "name": "",
+  "description": "",
+  "id": "login-functionality;login-with-in-valid-user-name;",
+  "rows": [
+    {
+      "cells": [
+        "Username",
+        "Password"
+      ],
+      "line": 24,
+      "id": "login-functionality;login-with-in-valid-user-name;;1"
+    },
+    {
+      "cells": [
+        "hellohihowru",
+        "Neelraj11"
+      ],
+      "line": 25,
+      "id": "login-functionality;login-with-in-valid-user-name;;2"
+    }
+  ],
+  "keyword": "Examples"
+});
+formatter.before({
+  "duration": 4434103300,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "I am on indiancouture landing page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 5,
+  "name": "I click sign-in link text",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 6,
+  "name": "I should navigate to sign-in page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginStepDefs.i_am_on_indiancouture_landing_page()"
+});
+formatter.result({
+  "duration": 8614484000,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginStepDefs.i_click_sign_in_link_text()"
+});
+formatter.result({
+  "duration": 885741800,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginStepDefs.i_should_navigate_to_sign_in_page()"
+});
+formatter.result({
+  "duration": 827232600,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 25,
+  "name": "login with in-valid user name",
+  "description": "",
+  "id": "login-functionality;login-with-in-valid-user-name;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 18,
+      "name": "@Login1"
+    },
+    {
+      "line": 1,
+      "name": "@SanityPack"
+    }
+  ]
+});
+formatter.step({
+  "line": 21,
+  "name": "I enter in-valid credentail \"hellohihowru\"\"Neelraj11\"",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 22,
+  "name": "I should see error message",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "hellohihowru",
+      "offset": 29
+    },
+    {
+      "val": "Neelraj11",
+      "offset": 43
+    }
+  ],
+  "location": "LoginStepDefs.i_enter_in_valid_credentail(String,String)"
+});
+formatter.result({
+  "duration": 192252400,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginStepDefs.i_should_see_error_message()"
+});
+formatter.result({
+  "duration": 28066200,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 737629500,
+  "status": "passed"
+});
+formatter.scenarioOutline({
+  "line": 28,
+  "name": "login with in-valid password",
+  "description": "",
+  "id": "login-functionality;login-with-in-valid-password",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 27,
+      "name": "@Login2"
+    }
+  ]
+});
+formatter.step({
+  "line": 30,
+  "name": "I enter valid \"\u003cUsername\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 31,
+  "name": "I enter in-valid\"\u003cPassword\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 32,
+  "name": "I click on log-in button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 33,
+  "name": "I should see error in the box sign-in failed",
+  "keyword": "Then "
+});
+formatter.examples({
+  "line": 34,
+  "name": "",
+  "description": "",
+  "id": "login-functionality;login-with-in-valid-password;",
+  "rows": [
+    {
+      "cells": [
+        "Username",
+        "Password"
+      ],
+      "line": 35,
+      "id": "login-functionality;login-with-in-valid-password;;1"
+    },
+    {
+      "cells": [
+        "ppothiwala@gmail.com",
+        "123xyzefg"
+      ],
+      "line": 36,
+      "id": "login-functionality;login-with-in-valid-password;;2"
+    }
+  ],
+  "keyword": "Examples"
+});
+formatter.before({
+  "duration": 4690885200,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "I am on indiancouture landing page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 5,
+  "name": "I click sign-in link text",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 6,
+  "name": "I should navigate to sign-in page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginStepDefs.i_am_on_indiancouture_landing_page()"
+});
+formatter.result({
+  "duration": 8515767700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginStepDefs.i_click_sign_in_link_text()"
+});
+formatter.result({
+  "duration": 941383400,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginStepDefs.i_should_navigate_to_sign_in_page()"
+});
+formatter.result({
+  "duration": 825388500,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 36,
+  "name": "login with in-valid password",
+  "description": "",
+  "id": "login-functionality;login-with-in-valid-password;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 27,
+      "name": "@Login2"
+    },
+    {
+      "line": 1,
+      "name": "@SanityPack"
+    }
+  ]
+});
+formatter.step({
+  "line": 30,
+  "name": "I enter valid \"ppothiwala@gmail.com\"",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 31,
+  "name": "I enter in-valid\"123xyzefg\"",
+  "matchedColumns": [
+    1
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 32,
+  "name": "I click on log-in button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 33,
+  "name": "I should see error in the box sign-in failed",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "ppothiwala@gmail.com",
+      "offset": 15
+    }
+  ],
+  "location": "LoginStepDefs.i_enter_valid(String)"
+});
+formatter.result({
+  "duration": 112807100,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "phone",
-      "offset": 26
-    },
-    {
-      "val": "email",
-      "offset": 34
-    },
-    {
-      "val": "post",
-      "offset": 42
+      "val": "123xyzefg",
+      "offset": 17
     }
   ],
-  "location": "ChristmasGigStepDefs.i_give_marketing_consent(String,String,String)"
+  "location": "LoginStepDefs.i_enter_in_valid(String)"
 });
 formatter.result({
-  "duration": 255273300,
+  "duration": 97209100,
   "status": "passed"
 });
 formatter.match({
-  "location": "ChristmasGigStepDefs.i_select_debit_card_payment()"
+  "location": "LoginStepDefs.i_click_on_log_in_button()"
 });
 formatter.result({
-  "duration": 62189500,
+  "duration": 64048200,
   "status": "passed"
 });
 formatter.match({
-  "location": "ChristmasGigStepDefs.i_select_card_type()"
+  "location": "LoginStepDefs.i_should_see_error_in_the_box_sign_in_failed()"
 });
 formatter.result({
-  "duration": 105146800,
-  "status": "passed"
-});
-formatter.match({
-  "location": "ChristmasGigStepDefs.i_provide_card_number()"
-});
-formatter.result({
-  "duration": 118269600,
-  "status": "passed"
-});
-formatter.match({
-  "location": "ChristmasGigStepDefs.i_select_expiry_date()"
-});
-formatter.result({
-  "duration": 168490400,
-  "status": "passed"
-});
-formatter.match({
-  "location": "ChristmasGigStepDefs.i_provide_security_code()"
-});
-formatter.result({
-  "duration": 53836300,
-  "status": "passed"
-});
-formatter.match({
-  "location": "ChristmasGigStepDefs.i_click_on_donate_now_button()"
-});
-formatter.result({
-  "duration": 139685300,
-  "status": "passed"
-});
-formatter.match({
-  "location": "ChristmasGigStepDefs.i_should_see_the_error_message()"
-});
-formatter.result({
-  "duration": 36045500,
+  "duration": 831608900,
   "status": "passed"
 });
 formatter.after({
-  "duration": 746343300,
+  "duration": 731024400,
   "status": "passed"
 });
 });
